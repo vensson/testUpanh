@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.testupanh"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.testupanh"
@@ -51,6 +51,8 @@ dependencies {
 
     // Thêm dòng này để load ảnh
     implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation(libs.androidx.media3.common.ktx)
+    implementation(libs.androidx.compiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -59,4 +61,13 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
+//    implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
+    implementation ("com.google.code.gson:gson:2.8.8")
+
 }
+
